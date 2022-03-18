@@ -37,7 +37,7 @@ const useFormPersist = (
 
   useEffect(() => {
     getStorage().setItem(name, JSON.stringify(values))
-  })
+  }, [values])
 
   return {
     clear: () => getStorage().removeItem(name)
